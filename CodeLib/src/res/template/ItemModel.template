@@ -1,0 +1,57 @@
+<![CDATA[package classes.views
+{
+	import classes.component.button.ButtonFactory;
+	import classes.component.button.LabelButton;
+	import classes.component.holder.HolderVO;
+	import classes.component.holder.ImageHolder;
+	import classes.component.label.LabelGroup;
+	import classes.component.label.LimitLabel;
+	import classes.lang.Lang;
+	import classes.load.ZHLoader;
+	import classes.tools.DisplayUtil;
+	import classes.tools.TextUtil;
+	import flash.display.MovieClip;
+	import flash.display.Shape;
+	import flash.display.Sprite;
+	import flash.events.Event;
+	public class {className} extends Sprite
+	{
+
+		public function {className}()
+		{
+			initialization();
+		}
+		//==========================================================================
+		//  Variables
+		//==========================================================================
+		// 容器
+		private var itemMain:MovieClip;
+        {addVar}
+		//==========================================================================
+		//  Public methods
+		//==========================================================================
+		public function fillItem():void
+		{
+			{addFill}
+		}
+
+		public function clear():void
+		{
+		    {addClear}
+		}
+		//==========================================================================
+		//  Private methods
+		//==========================================================================
+		/**
+		 *初始化
+		 */
+		private function initialization():void
+		{
+			itemMain = ZHLoader.getInstance().getMovieClipByName("{className}");
+			itemMain.name = "_mallItemView";
+			addChild(itemMain);
+			{addInit}
+		}
+	}
+}
+]]>

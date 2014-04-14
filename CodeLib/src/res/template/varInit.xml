@@ -1,0 +1,19 @@
+    <e>
+    <k>noNameLableInit</k>
+    <v>
+    <![CDATA[
+    		tipText=new LimitLabel("{txt}",{width});
+			DisplayUtil.moveTarget({parent},tipText,{x},{y});
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>NamedLableInit</k>
+    <v>
+    <![CDATA[
+    		{name}=new LimitLabel("{txt}",{width});
+			DisplayUtil.moveTarget({parent},{name},{x},{y},"{name}");
+]]>
+    </v>
+    </e>

@@ -1,0 +1,33 @@
+[
+    {
+        "sign":"TYPE_NUMBER",
+        "name":"id",
+        "type":"struct",
+        "sSign":"=",
+        "desList":[
+            {
+                "type":"data",
+                "name":"id"
+            },
+            {
+                "type":"struct",
+                "name":"self",
+                "sSign":"|",
+                "desList":[
+                            {
+                             "type":"data",
+                             "name":"sign"
+                            },
+                            {
+                             "type":"data",
+                             "name":"name"
+                            },
+                            {
+                             "type":"data",
+                             "name":"needTimes"
+                            }
+                            ]
+            }
+        ]
+    }
+]

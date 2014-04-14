@@ -1,0 +1,8 @@
+    <e>
+    <k>labelDefine</k>
+    <v>
+    <![CDATA[
+    private var {varName}:Label;
+]]>
+    </v>
+    </e>

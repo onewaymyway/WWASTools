@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<es locale="TW">    
+    <e>
+    <k>labelDefine</k>
+    <v>
+    <![CDATA[
+            public var {varName}:Label;
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>varDefine</k>
+    <v>
+    <![CDATA[
+        public var {varName}:{className};//]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>textAreaDefine</k>
+    <v>
+    <![CDATA[
+            public var {varName}:TextArea;
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>NamedTextAreaInit</k>
+    <v>
+    <![CDATA[
+    		{name}=new TextArea({width},{height},{center});
+			DisplayUtil.moveTarget({parent},{name},{x},{y});
+			{name}.text=Lang.getWord("{name}_Lang");
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>noNameTextAreaInit</k>
+    <v>
+    <![CDATA[
+    		tipTextArea=new TextArea({width},{height},{center});
+			DisplayUtil.moveTarget({parent},tipTextArea,{x},{y});
+			tipTextArea.text=Lang.getWord("{name}_Lang");
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>LableFill</k>
+    <v>
+    <![CDATA[
+    		{name}.text="";
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>labelTempDefine</k>
+    <v>
+    <![CDATA[
+            var tipText:Label;
+            var tipTextArea:TextArea;
+            var tButton:BaseButton;
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>noNameLableInit</k>
+    <v>
+    <![CDATA[
+    		tipText=new LimitLabel(Lang.getWord("{name}_Lang"),{width}{center});
+			DisplayUtil.moveTarget({parent},tipText,{x},{y});
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>labelButtonInit</k>
+    <v>
+    <![CDATA[
+    		tButton=ButtonFactory.createRedLabelButton(Lang.getWord("{name}_Lang"),2,{width});
+			DisplayUtil.moveTarget({parent},tButton,{x},{y},"{name}");
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>closeButtonInit</k>
+    <v>
+    <![CDATA[
+    		tButton=ButtonFactory.createSmallCloseButton();
+			DisplayUtil.moveTarget({parent},tButton,{x},{y},"{name}");
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>NamedLableInit</k>
+    <v>
+    <![CDATA[
+    		{name}=new LimitLabel(Lang.getWord("{name}_Lang"),{width}{center});
+			DisplayUtil.moveTarget({parent},{name},{x},{y},"{name}");
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>textFormat</k>
+    <v>
+    <![CDATA[,false,TextStyle.getNormalTextFormat({align:"{align}",color:{color}})]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>textAreaFormat</k>
+    <v>
+    <![CDATA[TextStyle.getNormalTextFormat({align:"{align}",color:{color}})]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>xmlItem</k>
+    <v>
+    <![CDATA[    			<e k="{key}" v="{value}"/>
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>BtnAddEventListner</k>
+    <v>
+    <![CDATA[
+        {name}.addEventListener(MouseEvent.CLICK, {name}Click);
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>PanelBtnAddEventListner</k>
+    <v>
+    <![CDATA[
+        {name}.addEventListener(MouseEvent.CLICK, {funName}_BtnClick);
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>BtnEventHandlers</k>
+    <v>
+    <![CDATA[
+        private function {name}Click(ev:MouseEvent = null):void
+		{
+             if(_bean == null)
+				return;
+			
+			if({BtnName}Handler != null)
+				{BtnName}Handler(_bean);
+				
+		}
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>BtnEventHandlersDefine</k>
+    <v>
+    <![CDATA[
+        public var {BtnName}Handler:Function;
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>PanelBtnEventHandlers</k>
+    <v>
+    <![CDATA[
+        private function {name}Click(ev:MouseEvent = null):void
+		{
+            dispatchEvent(new {funName}Event({funName}Event.ON_{BtnName}));
+		}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>modeViewImport</k>
+    <v>
+    <![CDATA[
+    import com.tg.st.mod.{modName}.model.{funName}Model;
+	import com.tg.st.mod.{modName}.view.{funName}View;
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>modeViewDefine</k>
+    <v>
+    <![CDATA[
+        private var {funNameL}View:{funName}View;		
+		private var {funNameL}Model:{funName}Model;
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>modeViewInit</k>
+    <v>
+    <![CDATA[
+        {funNameL}Model = new {funName}Model();	
+		{funNameL}View = new {funName}View({funNameL}Model);
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>modeOpenView</k>
+    <v>
+    <![CDATA[
+        private function open{funName}View():void
+		{
+			{funNameL}View.showWindow();
+		}
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>modFile</k>
+    <v>
+    <![CDATA[package com.tg.st.mod.{modName}
+{
+	import com.tg.st.service.PanelAsset;
+	import com.tg.st.data.bean.PlayerData;
+	import com.tg.st.data.global.GlobalData;
+	import com.tg.st.mod.ModBase;
+	import com.tg.st.mod.Notice;
+	
+	
+	{addVarImport}
+
+
+	public class {modName}Mod extends ModBase
+	{
+		public function {modName}Mod()
+		{
+			super();
+		}
+		
+
+		{addVarDefine}
+
+		
+		override public function init():void
+		{
+			 PanelAsset.addAsset("{modName}", "{modName}.swf");
+			
+			{addVarInit}
+		}
+		
+		override public function get interests():Array
+		{
+			return [Notice.MAIDEN_CLICK];
+		}
+		
+		override public function handleNotice(noticeName:String, noticeBody:Object):void
+		{
+			switch(noticeName)
+			{
+				case Notice.MAIDEN_CLICK : 
+					openLegion();
+					break;
+				default : 
+					break;
+			}
+		}
+		
+        {addOpenViews}
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>resolverDataDecodeArrayItem</k>
+    <v>
+    <![CDATA[
+                         
+   		                 dataObj.{dataName}={modName}Match.instance.{protocalFunName}ValueArray[{index}];
+]]>
+    </v>
+    </e>
+    
+     <e>   
+    <k>resolverDataDecodeItem</k>
+    <v>
+    <![CDATA[
+   		                 dataObj.{dataName}={modName}Match.instance.{protocalFunName}ValueArray[{index}];
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>resolverItem</k>
+    <v>
+    <![CDATA[
+   	    //-------------------------------------------------------------//
+		//-------------------------{exp}-------------------------------//
+		//-------------------------------------------------------------//
+		private static var {protocalFunName}Updating:Boolean = false;
+		private static var {protocalFunName}Callback:Array = new Array();
+		public static function {protocalFunName}(callback:Function, forced:Boolean = false):void
+		{
+//			var validated:Boolean = GlobalData.checkValidate(GlobalData.member_LIST);
+			
+//			if(!validated || forced)
+//			{
+				if({protocalFunName}Updating)
+				{
+					{protocalFunName}Callback.push(callback);
+				}
+				else
+				{
+					{protocalFunName}Updating = true;
+					{protocalFunName}Callback.push(callback);
+					
+					Data.call({modName}Struct.{protocalFunName}, [], function():void
+					{
+						{protocalFunName}Updating = false;
+						
+//						memberResolver.resolveMemberList({modName}Match.instance.{protocalFunName}ValueArray);
+//						var memberDataList:Array = GlobalData.findData(GlobalData.member_LIST) as Array;
+						
+						var dataObj:Object={};						
+						
+						//var decodeLib:Object={addLib};
+						
+						dataObj={modName}Match.instance.{protocalFunName}DataObj;
+						
+						/*
+						{addDecodeItems}
+						*/
+						
+						
+						while({protocalFunName}Callback.length > 0)
+						{
+							var fun:Function = {protocalFunName}Callback.shift();
+							fun(dataObj);
+						}
+						
+					});
+				}
+//			}
+//			else
+//			{
+//				var cachedData:Array = GlobalData.findData(GlobalData.member_LIST) as Array;
+//				callback(cachedData);
+//			}
+		}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>resolverFile</k>
+    <v>
+    <![CDATA[package com.tg.st.data.resolver
+{
+    import com.tg.protocol.ProtocalDecoderTool;
+	import com.tg.st.service.Data;
+	import com.tg.st.data.bean.PlayerData;
+	import com.tg.st.data.global.GlobalData;
+	import com.tg.st.data.protocal.{modName}Struct;
+
+	public class {modName}Resolver
+	{
+		public function {modName}Resolver()
+		{
+		}
+	
+	
+		{addResolverItems}
+
+		
+	}
+}
+]]>
+    </v>
+    </e>
+    
+
+    
+    
+    <e>   
+    <k>matchRegistItem</k>
+    <v>
+    <![CDATA[
+   		data.regist({modName}Struct.{protocalFunName}, {protocalFunName});
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>matchHandlerItem</k>
+    <v>
+    <![CDATA[
+   	    //-------------------------------------------------------------//
+		//-------------------------{exp}-------------------------------//
+		//-------------------------------------------------------------//
+		
+		public var {protocalFunName}ValueArray:Array;
+		public var {protocalFunName}DataObj:Object;
+		public function {protocalFunName}(dataValueArray:Array):void 
+		{
+			this.{protocalFunName}ValueArray = dataValueArray;
+			
+			var decodeLib:Object={addLib};
+			
+			{protocalFunName}DataObj=ProtocalDecoderTool.getDataObject(dataValueArray,decodeLib["main"],decodeLib);
+		}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>matchFile</k>
+    <v>
+    <![CDATA[package com.tg.st.data.resolver
+{
+	import com.tg.messagebox.ButtonType;
+	import com.tg.messagebox.MessageBox;
+	import com.tg.st.service.Data;
+	import com.tg.st.data.protocal.{modName}Struct;
+	import com.tg.st.data.resolver.base.DataResolverBase;
+	import com.tg.st.data.resolver.base.IDataResolver;
+	import com.tg.protocol.ProtocalDecoderTool;
+
+	public class {modName}Match extends DataResolverBase implements IDataResolver
+	{
+		public function {modName}Match()
+		{
+			_instance = this;
+		}
+		private static var _instance:{modName}Match;
+		public static function get instance():{modName}Match
+		{
+			if(_instance == null)
+				_instance = new {modName}Match();
+			
+			return _instance;
+		}
+		public function init(data:Data):void
+		{
+
+			{addRegists}
+			
+		}
+		
+
+		{addHandlers}
+
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>structProtocalItem</k>
+    <v>
+    <![CDATA[
+   		/** {exp} */
+		public static const {protocalFunName}:Object = {
+			module:{moduleID}, action:{actionID}, 
+			request:{request}, 
+			response:{response}
+		};
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>structFile</k>
+    <v>
+    <![CDATA[package com.tg.st.data.protocal
+{
+	import com.tg.util.Utils;
+
+	public class {modName}Struct
+	{
+		public function {modName}Struct()
+		{
+		}
+
+		{addProtocals}
+
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>eventFile</k>
+    <v>
+    <![CDATA[package com.tg.st.{modName}.event
+{
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+
+	public class {funName}Event extends Event
+	{
+		public static const {funName}EVENT:String="{funName}EVENT";
+		public var evt:MouseEvent;
+		public var data:Object;
+		public function {funName}Event(bubbles:Boolean=false, cancelable:Boolean=false)
+		{
+			super({funName}EVENT, bubbles, cancelable);
+		}
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>modelFile</k>
+    <v>
+    <![CDATA[package com.tg.st.mod.{modName}.model
+{
+
+
+
+	public class {funName}Model
+	{
+		public function {funName}Model()
+		{
+		}
+		
+
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>
+    <k>itemClassTemplate</k>
+    <v>
+    <![CDATA[package {package}
+{
+	import flash.display.MovieClip;
+	import flash.display.SimpleButton;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
+	
+	public dynamic class {className} extends MovieClip
+	{
+		// elements from .fla 
+		
+		{addVar}
+		
+		// elements from .fla finish
+				
+		public function {className}()
+		{
+			super();
+			
+			{addButtonAddEventListener}
+		}
+		
+		//private var _bean:{funName}Bean;
+		public var _bean:Object;
+		//public function init(bean:{funName}Bean):void
+		public function init(bean:Object):void
+		{
+			_bean = bean;
+			
+			{addInit}
+		}
+		
+		public function reset():void
+		{
+			{addReset}
+		}
+		
+		{addButtonEventHandlers}
+	}
+}
+]]>
+    </v>
+    </e>
+   
+   
+    <e>   
+    <k>viewBtnEventHandler</k>
+    <v>
+    <![CDATA[
+              case "{BtnName}"://
+				    //tBean=tParent._bean;
+					break;
+]]>
+    </v>
+    </e>
+   
+    <e>   
+    <k>viewFile</k>
+    <v>
+    <![CDATA[package com.tg.st.mod.{modName}.view
+{
+	import com.tg.messagebox.ButtonType;
+	import com.tg.messagebox.MessageBox;
+	import com.tg.st.service.PanelAsset;
+	import com.tg.st.app.Layout;
+	import com.tg.st.mod.{modName}.model.{funName}Model;
+	import com.tg.st.{modName}.{funName}Base;
+	import com.tg.st.{modName}.event.{funName}Event;
+	import com.tg.st.{modName}.bean.{funName}Bean;
+	import com.tg.window.Window;
+	import com.tg.window.WindowWrapper;
+	
+	import flash.events.MouseEvent;
+	import flash.geom.Rectangle;
+
+	public class {funName}View
+	{
+		private var model:{funName}Model;
+		public function {funName}View(model:{funName}Model)
+		{
+			this.model = model;
+		}
+		
+		private var panel:{funName}Base;
+		private var window:Window;
+		
+		/**
+		 * 显示面板 
+		 * 
+		 */
+		public function showWindow():void
+		{
+//			model.fetchMemberData(function(mainBean:{funName}Bean):void
+//          {modName}Resolver.getMyMoney(function(result:Object):void
+//			{
+				if(window != null)
+				{
+					initPanel();
+				}
+				else
+				{
+					PanelAsset.findComp("{modName}", "{funName}", function(comp:{funName}Base):void
+					{
+						panel = comp;
+						//panel.addEventListener({funName}Event.{funName}EVENT,panelClickHandler);
+						panel.addEventListener(MouseEvent.CLICK,mouseClick);
+
+
+						
+						window = WindowWrapper.wrap( panel, new Rectangle(0,0,583,33));
+						initPanel();
+					});
+				}
+//			});
+//			
+			
+		}
+		
+		private function initPanel():void
+		{
+//			Data.call(FactionWarStruct.getReportList,[],renderPanel);
+//			renderPanel();
+		}
+		private function renderPanel():void
+		{
+			var rst:Object;
+			//rst=rst;
+			var mainBean:{funName}Bean;
+			mainBean=new {funName}Bean;
+			//mainBean.initObj=rst;
+			//panel.init(mainBean);
+			showPanel();
+		}
+		private function showPanel():void
+		{
+			window.show();
+		}
+		
+		private function mouseClick(evt:MouseEvent):void
+		{
+			var tName:String;
+			tName=evt.target.name;
+			trace("mouseClick:"+tName);
+			var tParent:*;
+			tParent=evt.target.parent;
+			trace("targetParent"+tParent);
+			var tBean:Object;
+			switch(tName)
+			{
+				{addBtnCases}
+				
+			}
+			trace("tBean:"+tBean);
+		}
+		
+		/*
+		public function panelClickHandler(evt:{funName}Event):void
+		{
+			var msEvt:MouseEvent;
+			msEvt=evt.evt;
+			trace("Mouse Click:"+msEvt.target.name);
+			var tTargetName:String;
+			
+			tTargetName=msEvt.target.name;
+			switch(tTargetName)
+			{
+				{addBtnCases}
+				
+			}
+		}
+        */
+
+		public function closeMain():void
+		{
+			window.hide();
+		}
+
+	}
+}
+]]>
+    </v>
+    </e> 
+   
+    <e>   
+    <k>baseFile</k>
+    <v>
+    <![CDATA[package com.tg.st.{modName}
+{
+	import com.tg.st.{modName}.bean.{funName}Bean;
+	
+	import flash.display.MovieClip;
+
+	public class {funName}Base extends MovieClip
+	{
+		public function {funName}Base()
+		{
+		}
+		
+		public function init(bean:{funName}Bean):void
+		{
+			
+			
+		}
+	}
+}
+]]>
+    </v>
+    </e> 
+    
+    
+    
+    <e>   
+    <k>beanFile</k>
+    <v>
+    <![CDATA[package com.tg.st.{modName}.bean
+{
+	public class {funName}Bean
+	{
+	    public var initObj:Object;
+		public function {funName}Bean()
+		{
+		}
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>resImport</k>
+    <v>
+    <![CDATA[
+    import com.tg.st.{modName}.res.{funName}Panel;
+]]>
+    </v>
+    </e>
+    
+    <e>   
+    <k>resGet</k>
+    <v>
+    <![CDATA[
+		public function get {funName}():{funName}Base
+		{
+			return new {funName}Panel();
+		}
+]]>
+    </v>
+    </e>
+    
+    
+    <e>   
+    <k>resFile</k>
+    <v>
+    <![CDATA[package com.tg.st.{modName}
+{
+
+	{addImports}
+	
+	import flash.display.MovieClip;
+	
+	public dynamic class {modName}Res extends MovieClip
+	{
+		public function {modName}Res()
+		{
+			super();
+		}
+		
+
+		{addGets}
+		
+	}
+}
+]]>
+    </v>
+    </e>
+    
+    <e>
+    <k>panelClassTemplate</k>
+    <v>
+    <![CDATA[package {package}
+{
+
+	import com.tg.st.{modName}.{funName}Base;
+	import com.tg.st.{modName}.bean.{funName}Bean;
+	import com.tg.st.{modName}.event.{funName}Event;
+	
+	import flash.display.SimpleButton;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
+	
+	public dynamic class {className} extends {funName}Base
+	{
+		// elements from .fla
+		
+		{addVar}
+		
+		// elements from .fla finish
+		
+		private var _bean:{funName}Bean;
+		
+		public function get bean():{funName}Bean
+		{return _bean;}
+		
+		
+		public function {className}()
+		{
+			super();
+			
+			{addButtonAddEventListener}
+		}
+
+		override public function init(bean:{funName}Bean):void
+		{
+			_bean = bean;
+			
+			{addInit}
+		}
+		
+	    public function reset():void
+		{
+			{addReset}
+		}
+		
+
+		
+	    private function {funName}_BtnClick(ev:MouseEvent = null):void
+		{
+			var tEvent:{funName}Event;
+			tEvent=new {funName}Event();
+			tEvent.evt=ev;
+            dispatchEvent(tEvent);
+		}
+	}
+}
+]]>
+    </v>
+    </e>
+</es>

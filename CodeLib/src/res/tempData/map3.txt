@@ -1,0 +1,70 @@
+{
+"video_id":0,
+"video_file":"",
+"video_lock":0,
+"scenes":
+    [
+     {
+      "map":2,
+      "monsters":
+       [
+         {
+           "id":1000003,
+           "monster_id":36,
+           "position_x":1000,
+           "position_y":650,
+           "start_video_id":0,
+           "start_video_file":"",
+           "start_video_lock":0,
+           "end_video_id":0,
+           "end_video_file":"",
+           "end_video_lock":0,
+           "max_bout_number":0,
+           "request_bout_number":0,
+           "fuhuo_mission_monster_id":0,
+           "fuhuo_bout_number":0,
+           "attack_can_not_dead_number":0
+          },
+           
+          {
+            "id":1000004,
+            "monster_id":37,
+            "position_x":1750,
+            "position_y":650,
+            "start_video_id":0,
+            "start_video_file":"",
+            "start_video_lock":0,
+            "end_video_id":0,
+            "end_video_file":"",
+            "end_video_lock":0,
+            "max_bout_number":0,
+            "request_bout_number":0,
+            "fuhuo_mission_monster_id":0,
+            "fuhuo_bout_number":0,
+            "attack_can_not_dead_number":0
+           },
+            
+           {
+            "id":1000005,
+            "monster_id":35,
+            "position_x":2500,
+            "position_y":650,
+            "start_video_id":0,
+            "start_video_file":"",
+            "start_video_lock":0,
+            "end_video_id":14,
+            "end_video_file":"",
+            "end_video_lock":210,
+            "max_bout_number":0,
+            "request_bout_number":0,
+            "fuhuo_mission_monster_id":0,
+            "fuhuo_bout_number":0,
+            "attack_can_not_dead_number":0
+            }
+            
+        ]
+      }
+    ],
+    "monster_list":
+    {"36":1,"37":1,"35":1}
+ }
